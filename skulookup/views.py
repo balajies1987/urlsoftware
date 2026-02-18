@@ -87,3 +87,8 @@ def logout_view(request):
     """Logout - clears session and redirects to login."""
     request.session.flush()
     return redirect('skulookup:login')
+
+
+def forgot_password_view(request):
+    """Forgot password page - displays admin contact info."""
+    return render(request, 'skulookup/forgot_password.html')
